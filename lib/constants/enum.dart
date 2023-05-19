@@ -1,0 +1,4 @@
+enum ConnectivityType {
+  wifi,
+  mobiles,
+}
