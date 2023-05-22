@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_plus_minus_test_app/constants/enum.dart';
-import 'package:flutter_bloc_plus_minus_test_app/cubit/counter_cubit.dart';
-import 'package:flutter_bloc_plus_minus_test_app/cubit/internet_cubit.dart';
+import 'package:flutter_bloc_plus_minus_test_app/logic/cubit/counter_cubit.dart';
+import 'package:flutter_bloc_plus_minus_test_app/logic/cubit/internet_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.title});
@@ -127,6 +127,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 child: const Text(
                   'Third page',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    '/settings',
+                  );
+                },
+                child: const Text(
+                  'Settings page',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
